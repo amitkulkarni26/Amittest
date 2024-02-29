@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date, Time, and Server IP</title>
+<script>
+  // Function to get the current date and time
+  function getCurrentDateTime() {
+    var currentDate = new Date();
+    return currentDate.toLocaleString();
+  }
+
+  // Function to get the server's IP address
+  function getServerIP() {
+    return location.hostname;
+  }
+
+  // Function to update the date, time, and server IP
+  function updateDateTimeAndIP() {
+    document.getElementById('datetime').textContent = getCurrentDateTime();
+    document.getElementById('server-ip').textContent = getServerIP();
+  }
+
+  // Update date, time, and server IP on page load
+  window.onload = function() {
+    updateDateTimeAndIP();
+  };
+</script>
+</head>
+<body>
+  <h1>Date, Time, and Server IP</h1>
+  <p><strong>Date and Time:</strong> <span id="datetime"></span></p>
+  <p><strong>Server IP:</strong> <span id="server-ip"></span></p>
+</body>
+</html>
